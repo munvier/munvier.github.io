@@ -112,13 +112,21 @@ img {
     max-width: 100%;
 }
 
+.main-container {
+    width:50%;
+    margin:0 auto;
+}
+
 .main-container .wrapper{
     margin:0 auto;
     width:100%;
 }
 .main-container section{
     margin:0 auto;
-    width:800px;
+    width:100%;
+}
+.main-container .me-myself-and-i:hover p{
+    color:rgba(255,255,255,0.5);
 }
 
 .wrapper .picture {
@@ -149,10 +157,50 @@ p,a {
     font-size:12px;
     line-height: 16px;
     margin: 0 0 10px;
+    transition: all 0.5s ease 0s;
 }
 
 a {
     color:rgba(255,255,255,0.6);
+}
+
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+a.tooltips span {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -20px;
+  color: #FFFFFF;
+  background: rgba(0,0,0,0.5);
+  opacity:0;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding:0 10px;
+  border-radius: 25px;
+  box-shadow: 0px 3px 3px #000000;
+  transition: all 0.5s ease 0s;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid rgba(0,0,0,0.5);
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+  opacity:1;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -20px;
+  z-index: 999;
 }
 
 hr {
@@ -175,7 +223,7 @@ hr {
     color:#B2881C;
     font-size: 15px;
     text-decoration: none;
-    transition: all 0.25s ease 0s;
+    transition: all 0.5s ease 0s;
 }
 
 .me-myself-and-i a:hover {
@@ -228,8 +276,7 @@ hr {
     display: inline-block;
     float: left;
     font-size: 16px;
-    margin: 1px 27px 0 0;
-    transition: all 0.25s ease 0s;
+    transition: all 0.5s ease 0s;
 }
 
 .profile li:hover .bullet .fa {
@@ -237,6 +284,7 @@ hr {
 }
 .profile li .content {
     display: inline-block;
+    margin: 0px 0 0 27px;
 }
 
 .profile .content .fa{
@@ -256,7 +304,7 @@ hr {
     display: inline-block;
     overflow: hidden;
     position: relative;
-    transition: all 0.25s ease 0s;
+    transition: all 0.5s ease 0s;
 }
 
 .profile a.white:after{
@@ -267,10 +315,26 @@ hr {
     height: 1px;
     left: -100%;
     position: absolute;
-    transition: all 0.25s ease 0s;
+    transition: all 0.5s ease 0s;
     width: 100%;
 }
 .profile a.white:hover:after {
     left: 0;
-    transition: all 0.25s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        width:70%;
+        margin:0 auto;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .main-container {
+        width:90%;
+        margin:0 auto;
+    }
 }
