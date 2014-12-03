@@ -148,11 +148,15 @@ img {
     box-shadow: 0 0 250px 0 rgba(255,255,255,0.2);
 }
 
-h1 {
+h1,
+h1 p {
     color: rgba(255, 255, 255, 0.6);
     font-size: 21px;
     font-weight: 300;
+    float:right;
+    line-height: 30px;
     margin:0 0 20px;
+    text-align: right;
 }
 
 p,a {
@@ -246,7 +250,13 @@ section {
 }
 
 section .white {
-    color:rgba(255,255,255,0.6);
+    color:rgba(255,255,255,0.6);    
+    line-height: 24px;
+}
+
+section .white {
+    color:rgba(255,255,255,0.6);    
+    line-height: 20px;
 }
 
 section header {
@@ -262,7 +272,8 @@ section h1 {
 section .fa-stack {
     font-size:16px;
     font-weight: normal;
-    margin-left: 10px;
+    margin: 2px 0px 0px 10px;
+    float: right;
 }
 
 section article {
@@ -338,6 +349,7 @@ section.me-myself-and-i header,
 section.me-myself-and-i article,
 section.me-myself-and-i h1{
   float:none;
+  text-align: left;
   width: 100%;
 }
 
