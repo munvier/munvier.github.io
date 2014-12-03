@@ -368,7 +368,8 @@ section.me-myself-and-i h1{
 @media screen and (max-width: 550px) {
 	
 	.profile header,
-	.profile article {
+  .profile article,
+	.profile h1 {
 	    float: none;
 	    width: auto;
 	}
@@ -388,17 +389,4 @@ section.me-myself-and-i h1{
     .profile a {
         font-size:10px;
     }
-<<<<<<< HEAD
 }
-
-#morph {
-	position:fixed;
-	left:0;
-	bottom:0;
-	top:0;
-	right:0;	
-}
-
-=======
-}
->>>>>>> ac9751784b0f52c0f87069c50415564a9ae5255d
