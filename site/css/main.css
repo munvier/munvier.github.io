@@ -402,7 +402,8 @@ section.me-myself-and-i article {
   
   section header,
   section article {
-    padding-left: 10%;
+    clear: both;
+    padding-left: 0%;    
   }
 
   section header,
