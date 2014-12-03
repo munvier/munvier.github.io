@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="site/css/normalize.min.css">
+        <link rel="stylesheet" href="site/css/main.css">
+        <link rel="stylesheet" href="site/css/font-awesome.min.css">
+
+        <script src="site/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="site/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script src="site/js/two.js"></script>
+        <style>
+            html, body{
+                height:100%;
+                width:100%;
+                background: black;
+            }
+        </style>;
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="main-container" id="morph">
+        </div>
+        <script>
+            lerp = function(a,b,u) {
+                return (1-u) * a + u * b;
+            };
+
+            fade = function(element, property, start, end, duration) {
+              var interval = 10;
+              var steps = duration/interval;
+              var step_u = 1.0/steps;
+              var u = 0.0;
+              var theInterval = setInterval(function(){
+                if (u >= 1.0){ clearInterval(theInterval) }
+                var r = parseInt(lerp(start.r, end.r, u));
+                var g = parseInt(lerp(start.g, end.g, u));
+                var b = parseInt(lerp(start.b, end.b, u));
+                var colorname = 'rgb('+r+','+g+','+b+')';
+                el.style.setProperty(property, colorname);
+                u += step_u;
+              }, interval);
+            };
+
+            var el = document.getElementById("morph");
+            var two = new Two({
+                fullscreen: true
+            });
+
+            var offsetYStart = 10;
+            var windowWidth = $(window).width();
+            var triangleWidth = 50;
+            var nbTriangles = 1000;
+
+            var nbByLines = Math.ceil(windowWidth/triangleWidth);
+
+            for(i=0; i < nbTriangles; i++) {
+
+                var x = (i%nbByLines)*triangleWidth;
+                var y = Math.floor(i/nbByLines)*triangleWidth;
+
+                if ((y) > parseInt($(window).height())) {
+                    break;
+                }
+
+                var randomNess = Math.round(Math.random())*50;
+                var poly = two.makePolygon(x+randomNess, offsetYStart+y+randomNess, x+triangleWidth-randomNess, offsetYStart+y, x, offsetYStart+y+triangleWidth);
+                var grey = '0'+(Math.floor(Math.random()*16)).toString(16);
+                console.log(grey);
+                poly.fill = '#'+grey+grey+grey;
+                poly.noStroke();
+
+                var myLuck = Math.floor(Math.random()*3);
+
+                if (myLuck) {
+                    two.appendTo(el);
+                    nbTriangles++;
+                }
+
+
+            }
+
+            two.update();
+
+            setInterval(function(){
+                var triangle = Math.floor(Math.random()*nbTriangles);
+                el = document.getElementById('two_'+triangle); // your element
+                property = 'fill';       // fading property
+                myColor = document.defaultView.getComputedStyle(el, null).getPropertyValue("fill");
+                myColor = myColor.replace('rgb(','').replace(')','');
+                console.log(myColor);
+                tabColor = myColor.split(",");
+                startColor = {r:$.trim(tabColor[0]), g:  $.trim(tabColor[1]), b:  $.trim(tabColor[2])};  // red
+                endColor   = {r:  128, g:128, b:128};  // dark turquoise
+                fade(el,property,startColor,endColor,1000);
+                setTimeout(fade,1000,el,property,endColor,startColor,1000);
+            },2000);
+            
+        </script>
+    </body>
+</html>
