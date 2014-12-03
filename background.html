@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="site/css/font-awesome.min.css">
 
         <script src="site/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<<<<<<< HEAD
         <script>window.jQuery || document.write('<script src="site/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="site/js/two.js"></script>
         <style>
@@ -24,6 +25,9 @@
                 background: black;
             }
         </style>;
+=======
+        <script src="site/js/two.js"></script>
+>>>>>>> ac9751784b0f52c0f87069c50415564a9ae5255d
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -33,6 +37,7 @@
         <div class="main-container" id="morph">
         </div>
         <script>
+<<<<<<< HEAD
             lerp = function(a,b,u) {
                 return (1-u) * a + u * b;
             };
@@ -53,11 +58,14 @@
               }, interval);
             };
 
+=======
+>>>>>>> ac9751784b0f52c0f87069c50415564a9ae5255d
             var el = document.getElementById("morph");
             var two = new Two({
                 fullscreen: true
             });
 
+<<<<<<< HEAD
             var offsetYStart = 10;
             var windowWidth = $(window).width();
             var triangleWidth = 50;
@@ -107,6 +115,14 @@
                 setTimeout(fade,1000,el,property,endColor,startColor,1000);
             },2000);
             
+=======
+            var poly = two.makePolygon(110, 100, 180, 150, 190, 100);
+            poly.stroke = "#cccccc";
+            poly.fill = "#ececec";
+
+            two.appendTo(el);
+            two.update();
+>>>>>>> ac9751784b0f52c0f87069c50415564a9ae5255d
         </script>
     </body>
 </html>

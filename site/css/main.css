@@ -117,8 +117,11 @@ img {
 .main-container {
     width:50%;
     margin:0 auto;
+<<<<<<< HEAD
     position:relative;
     z-index:1;
+=======
+>>>>>>> ac9751784b0f52c0f87069c50415564a9ae5255d
 }
 
 .main-container .wrapper{
@@ -380,6 +383,7 @@ hr {
     .profile a {
         font-size:10px;
     }
+<<<<<<< HEAD
 }
 
 #morph {
@@ -390,3 +394,6 @@ hr {
 	right:0;	
 }
 
+=======
+}
+>>>>>>> ac9751784b0f52c0f87069c50415564a9ae5255d
