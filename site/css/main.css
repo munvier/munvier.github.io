@@ -117,11 +117,8 @@ img {
 .main-container {
     width:50%;
     margin:0 auto;
-<<<<<<< HEAD
     position:relative;
     z-index:1;
-=======
->>>>>>> ac9751784b0f52c0f87069c50415564a9ae5255d
 }
 
 .main-container .wrapper{
@@ -237,71 +234,72 @@ hr {
     color:white;
 }
 
-.profile {
+section {
     display: block;
     margin: 0 auto 20px;
     width: 800px;
 }
 
-.profile .white {
+section .white {
     color:rgba(255,255,255,0.6);
 }
 
-.profile header {
+section header {
     float: left;
-    width: 30%;
+    width: 40%;
 }
 
-.profile h1 {
+section h1 {
     line-height: 32px;
+    float:right;
 }
 
-.profile .fa-stack {
+section .fa-stack {
     font-size:16px;
     font-weight: normal;
     margin-left: 10px;
 }
 
-.profile article {
+section article {
     float: left;
-    width: 70%;
+    width: 60%;
 }
 
 
-.profile ul,
-.profile li {
+section ul,
+section li {
     margin:0;
     padding: 0;
 }
 
-.profile li {
+section li {
     list-style-type: none;
     padding: 0px 0 0px 27px;
     transition: all 0.5s ease 0s;
 }
 
-.profile li .bullet .fa {
+section li .bullet .fa {
     display: inline-block;
     float: left;
     font-size: 16px;
     transition: all 0.5s ease 0s;
 }
 
-.profile li:hover .bullet .fa {
+section li:hover .bullet .fa {
     color:rgba(255,255,255,1);
 }
-.profile li .content {
+section li .content {
     display: inline-block;
     margin: 0px 0 0 27px;
 }
 
-.profile .content .fa{
+section .content .fa{
     color:rgba(255,255,255,0.3);
     font-size: 18px;
     margin:0 10px 0 0;
 }
 
-.profile a.white {
+section a.white {
     border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
     color:rgba(255,255,255,0.6);
     outline: medium none;
@@ -315,7 +313,7 @@ hr {
     transition: all 0.5s ease 0s;
 }
 
-.profile a.white:after{
+section a.white:after{
     background-color: #fff;
     bottom: 0;
     content: "";
@@ -326,9 +324,16 @@ hr {
     transition: all 0.5s ease 0s;
     width: 100%;
 }
-.profile a.white:hover:after {
+section a.white:hover:after {
     left: 0;
     transition: all 0.5s ease 0s;
+}
+
+section.me-myself-and-i header,
+section.me-myself-and-i article,
+section.me-myself-and-i h1{
+  float:none;
+  width: 100%;
 }
 
 
