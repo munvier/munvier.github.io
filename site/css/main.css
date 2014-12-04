@@ -126,7 +126,22 @@ img {
     width:100%;
 }
 .main-container section{
-    margin:0 auto;
+    box-sizing:border-box;
+    float:left;
+    margin:0 0 0  5%;
+    width:45%;
+}
+
+
+.main-container section + section{
+    margin:0  5% 0 0;
+}
+.main-container section:nth-child(2n){
+    clear:both;
+}
+
+.main-container section.me-myself-and-i {
+    margin: 0 auto;
     width:100%;
 }
 .main-container .me-myself-and-i:hover p{
@@ -309,7 +324,7 @@ section li:hover .bullet .fa {
     color:rgba(255,255,255,1);
 }
 section li .content {
-    margin: 0px 0 0 27px;
+    margin: 2px 0 0 37px;
 }
 
 section .content .fa{
@@ -390,6 +405,11 @@ section.me-myself-and-i article {
 @media screen and (max-width: 1000px) {
     .main-container {
         width:90%;
+        margin:0 auto;
+    }
+
+    .main-container section {
+        width:100%;
         margin:0 auto;
     }
 }
