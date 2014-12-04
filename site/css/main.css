@@ -256,7 +256,7 @@ section .white {
 
 section .white {
     color:rgba(255,255,255,0.6);    
-    line-height: 20px;
+    line-height: 18px;
 }
 
 section header {
@@ -291,16 +291,17 @@ section li {
 
 section li {
     list-style-type: none;
-    padding: 0px 0 0px 27px;
+    padding: 7px 0 10px 27px;
     transition: all 0.5s ease 0s;
 }
 
 section li .bullet {
-  float:left;
+    float:left;
 }
 
 section li .bullet .fa {
     font-size: 16px;
+    margin: 3px 0 0 0;
     transition: all 0.5s ease 0s;
 }
 
