@@ -295,8 +295,11 @@ section li {
     transition: all 0.5s ease 0s;
 }
 
+section li .bullet {
+  float:left;
+}
+
 section li .bullet .fa {
-    float: left;
     font-size: 16px;
     transition: all 0.5s ease 0s;
 }
@@ -305,7 +308,6 @@ section li:hover .bullet .fa {
     color:rgba(255,255,255,1);
 }
 section li .content {
-    display: inline-block;
     margin: 0px 0 0 27px;
 }
 
@@ -418,6 +420,16 @@ section.me-myself-and-i article {
       float: none;
       width: auto;
   }
+
+    h1, h1 p {
+      float: none;
+      text-align: left;
+    }
+
+    section .fa-stack {
+      float: left;
+      margin-right:10px;
+    }
 }
 
 @media screen and (max-width: 460px) {
