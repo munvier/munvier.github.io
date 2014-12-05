@@ -165,7 +165,7 @@ img {
 
 h1,
 h1 p {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 21px;
     font-weight: 300;
     float:right;
@@ -297,7 +297,7 @@ section .fa-stack {
 }
 
 section .fa-stack-1x {
-  color:white;
+  color:rgba(255, 255, 255, 0.8);
 }
 
 section article {
