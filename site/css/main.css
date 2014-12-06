@@ -131,7 +131,7 @@ img {
     margin:0 0 0  5%;
     width:45%;
     /**/
-    transition: all 1s ease 0s;
+    transition: all 0.5s ease 0s;
 }
 
 
@@ -154,9 +154,13 @@ img {
     margin:40px auto;
     width:400px;
     max-width:400px;
+    transition: all 0.5s ease 0s;
 }
 
 .wrapper .picture img{
+    position: relative;
+    top:0;
+    left:0;
     border-radius: 200px;
     border:10px solid rgba(255,255,255,0.15);
     box-sizing: border-box;
@@ -406,8 +410,8 @@ section a.white:after{
     height: 1px;
     left: -100%;
     position: absolute;
-    transition: all 0.5s ease 0s;
     width: 100%;
+    transition: all 0.5s ease 0s;
 }
 section a.white:hover:after {
     left: 0;
@@ -548,4 +552,22 @@ section.me-myself-and-i article {
 
 .hideIfNotVisible {
   opacity: 0;
+}
+
+.pace .pace-progress {
+  background: #f1b22a;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+.pace-inactive {
+  display: none;
 }
