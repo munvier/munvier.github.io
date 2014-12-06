@@ -31,7 +31,6 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
-        <script src="site/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="site/js/outdatedbrowser.js"></script>
 
         <script>
@@ -53,7 +52,7 @@
         </div>
         <div class="main-container">
             <div class="main wrapper clearfix">
-                <section class="me-myself-and-i">
+                <section data-boundaries="both" class="hideIfNotVisible me-myself-and-i">
                     <header>
                         <figure class="picture">
                             <img alt="Me, Myself and I" src="site/img/me-myself-and-i.jpg" />
@@ -68,7 +67,7 @@
 Responsable des choix techniques de mon entreprise, mes missions mélangent développement PHP, JavaScript (Natif, jQuery, AngularJS), Intégration HTML5 / CSS3, maintenance et support auprès de nos clients.</p>
                     </article>
                 </section>
-                <section class="profile clearfix">
+                <section data-boundaries="both" class="hideIfNotVisible profile clearfix">
                     <hr/>
                     <header>
                        <h1> 
@@ -121,7 +120,7 @@ Responsable des choix techniques de mon entreprise, mes missions mélangent dév
                         </ul>
                     </article>
                 </section>
-                <section class="education clearfix">
+                <section data-boundaries="both" class="hideIfNotVisible jobs clearfix">
                     <hr/>
                     <header>
                        <h1>
@@ -167,7 +166,7 @@ Responsable des choix techniques de mon entreprise, mes missions mélangent dév
                         </ul>
                     </article>
                 </section>
-                <section class="skills clearfix">
+                <section data-boundaries="both" class="hideIfNotVisible skills clearfix">
                     <hr/>
                     <header>
                        <h1> 
@@ -239,7 +238,7 @@ Responsable des choix techniques de mon entreprise, mes missions mélangent dév
                         </ul>
                     </article>
                 </section>
-                <section class="owner clearfix">
+                <section data-boundaries="both" class="hideIfNotVisible owner clearfix">
                     <hr/>
                     <header>
                        <h1> 
@@ -277,7 +276,7 @@ Responsable des choix techniques de mon entreprise, mes missions mélangent dév
                         </ul>
                     </article>
                 </section>
-                <section class="education clearfix">
+                <section data-boundaries="both" class="hideIfNotVisible education clearfix">
                     <hr/>
                     <header>
                        <h1> 
@@ -311,7 +310,7 @@ Responsable des choix techniques de mon entreprise, mes missions mélangent dév
                         </ul>
                     </article>
                 </section>
-                <section class="friends clearfix">
+                <section data-boundaries="both" class="hideIfNotVisible friends clearfix">
                     <hr/>
                     <header>
                        <h1> 
@@ -348,6 +347,7 @@ Responsable des choix techniques de mon entreprise, mes missions mélangent dév
         <div id="outdated"></div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="site/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script src="site/js/jquery.inview.min.js"></script>
         <script src="site/js/main.js"></script>
         <script>
             (function(f,b,g){

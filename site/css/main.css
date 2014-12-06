@@ -130,6 +130,8 @@ img {
     float:left;
     margin:0 0 0  5%;
     width:45%;
+    /**/
+    transition: all 1s ease 0s;
 }
 
 
@@ -542,4 +544,8 @@ section.me-myself-and-i article {
     section a {
         font-size:10px;
     }
+}
+
+.hideIfNotVisible {
+  opacity: 0;
 }
