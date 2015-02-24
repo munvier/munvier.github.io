@@ -131,7 +131,7 @@ img {
     margin:0 0 0  5%;
     width:45%;
     /**/
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 
@@ -154,7 +154,7 @@ img {
     margin:40px auto;
     width:400px;
     max-width:400px;
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 .wrapper .picture img{
@@ -193,7 +193,7 @@ p,a {
     line-height: 16px;
     margin: 0 0 10px;
     /**/
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
     text-shadow: 0 2px 2px #000000;
 }
 
@@ -219,7 +219,7 @@ a.tooltips span {
   padding:0 10px;
   border-radius: 25px;
   box-shadow: 0px 3px 3px #000000;
-  transition: all 0.5s ease 0s;
+  transition: all 0.25s ease 0s;
 }
 a.tooltips span:after {
   content: '';
@@ -265,11 +265,53 @@ hr {
     color:#F1B22F;
     font-size: 15px;
     text-decoration: none;
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 .me-myself-and-i a:hover {
     color:white;
+}
+
+.me-myself-and-i a.cv {
+	background: none repeat scroll 0 0 #F1B22F;
+  	border-radius: 25px;
+  	box-shadow: 0px 3px 3px #000000;
+	color:#1E1E1E;
+	display: block;
+	font-size: 12px;
+    line-height: 16px;
+	margin: 0 auto 3px;
+	padding: 15px;
+	text-shadow: none;
+	text-align:center;
+	width: 250px;
+}
+.me-myself-and-i a.cv i{
+	font-size: 24px;
+	line-height: 0;
+	margin-right: 8px;
+	position: relative;
+	top: 4px;
+}
+.me-myself-and-i a.cv span i{
+	font-size: 15px;
+	line-height: 1;
+	margin-right: 0px;
+	position: relative;
+	top: 0;
+}
+.me-myself-and-i a:hover.cv {
+	background: none repeat scroll 0 0 white;
+  	border-radius: 25px;
+  	box-shadow: 0px 0px 0px #000000;
+	color:#1E1E1E;
+	display: block;
+	margin: 3px auto 0;
+}
+
+
+.me-myself-and-i a.cv span {
+  bottom: 60px;
 }
 
 section {
@@ -327,7 +369,7 @@ section li {
     list-style-type: none;
     padding: 7px 0 10px 27px;
     position:relative;
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 section li .bullet {
@@ -343,7 +385,7 @@ section li .bullet:after {
     left: 33px;
     position: absolute;
     top: 34px;
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 
@@ -354,7 +396,7 @@ section li:last-child .bullet:after {
 section li .bullet .fa {
     font-size: 16px;
     margin: 3px 0 0 0;
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 section li .bullet .fa-2x {
@@ -399,7 +441,7 @@ section a.white {
     display: inline-block;
     overflow: hidden;
     position: relative;
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 section a.white:after{
@@ -411,11 +453,11 @@ section a.white:after{
     left: -100%;
     position: absolute;
     width: 100%;
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 section a.white:hover:after {
     left: 0;
-    transition: all 0.5s ease 0s;
+    transition: all 0.25s ease 0s;
 }
 
 section.me-myself-and-i header,
