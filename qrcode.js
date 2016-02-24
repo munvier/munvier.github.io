@@ -31,6 +31,7 @@
             a.css('position', "absolute");
             a.css('top', (window.pageYOffset + 20) + "px");
             a.css('left', (window.pageXOffset + 20) + "px");
+            a.css('z-index', 1000);
             a.prependTo(jQuery('body'));
             a.hide();
             a.fadeIn()
